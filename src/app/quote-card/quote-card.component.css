@@ -1,0 +1,25 @@
+ .quote-card {
+     border-radius: 16px;
+     padding: 16px 18px;
+     background: linear-gradient(135deg, #e0f2fe, #dcfce7);
+     box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+     animation: fadein .4s ease forwards;
+     opacity: 0;
+ }
+
+ .text {
+     font-size: 18px;
+     line-height: 1.5;
+     margin: 0 0 6px;
+ }
+
+ .author {
+     margin: 0;
+     opacity: .7;
+ }
+
+ @keyframes fadein {
+     to {
+         opacity: 1;
+     }
+ }

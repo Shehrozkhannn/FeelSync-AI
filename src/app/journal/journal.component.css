@@ -1,0 +1,59 @@
+ .wrap {
+     max-width: 960px;
+     margin: 0 auto;
+     display: grid;
+     gap: 16px;
+ }
+
+ .card {
+     background: rgba(255, 255, 255, .75);
+     border-radius: 16px;
+     backdrop-filter: blur(8px);
+     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+     padding: 16px 18px;
+ }
+
+ .entry h2 {
+     margin-top: 0;
+ }
+
+ .row {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+     margin-top: 12px;
+ }
+
+ .tag {
+     appearance: none;
+     padding: 10px 12px;
+     border-radius: 10px;
+     border: 1px solid #e5e7eb;
+     background: #fff;
+     font-size: 14px;
+ }
+
+ .save {
+     margin-left: auto;
+     padding: 10px 16px;
+     border: 0;
+     border-radius: 12px;
+     background: linear-gradient(90deg, #22c55e, #06b6d4);
+     color: white;
+     font-weight: 700;
+     cursor: pointer;
+     transition: transform .08s ease;
+ }
+
+ .save:disabled {
+     filter: grayscale(.8) brightness(.9);
+     cursor: not-allowed;
+ }
+
+ .save:active {
+     transform: translateY(1px) scale(.99);
+ }
+
+ h3 {
+     margin: 0 0 8px;
+ }

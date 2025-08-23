@@ -1,0 +1,25 @@
+ .grid {
+     display: grid;
+     grid-template-columns: repeat(8, 1fr);
+     gap: 8px;
+ }
+
+ .emoji {
+     font-size: 24px;
+     padding: 10px;
+     border-radius: 12px;
+     border: 0;
+     background: #fff;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+     cursor: pointer;
+     transition: transform .08s ease, box-shadow .2s ease;
+ }
+
+ .emoji:hover {
+     transform: translateY(-1px);
+     box-shadow: 0 6px 18px rgba(0, 0, 0, .10);
+ }
+
+ .emoji.active {
+     outline: 2px solid #06b6d4;
+ }

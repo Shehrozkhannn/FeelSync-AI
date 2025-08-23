@@ -1,0 +1,21 @@
+ .app-shell {
+   min-height: 100vh;
+   background: radial-gradient(1200px 600px at 10% 10%, #fff6, transparent), linear-gradient(120deg, #fef3c7, #e0e7ff 40%, #ffe4e6);
+   padding: 24px;
+   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+   color: #111827;
+ }
+
+ h1 {
+   text-align: center;
+   margin-bottom: 12px;
+   font-weight: 800;
+   letter-spacing: .4px;
+ }
+
+ span{
+  display: flow;
+  text-align: center;
+  margin-bottom: 20px;
+  color: grey;
+ }

@@ -1,0 +1,28 @@
+<div class="wrap">
+      <section class="card entry">
+        <h2>How are you feeling today?</h2>
+
+        <app-mood-picker (pick)="onPick($event)" [selected]="emoji()" />
+
+        <app-animated-textarea
+          placeholder="Today I feel…"
+          (valueChange)="note.set($event)">
+        </app-animated-textarea>
+
+        <div class="row">
+          <select [(ngModel)]="tagModel" class="tag">
+            <option *ngFor="let t of tags" [value]="t">{{t}}</option>
+          </select>
+          <button class="save" (click)="save()" [disabled]="!canSave()">Save & Get Tip</button>
+        </div>
+      </section>
+
+      <section class="card quote" *ngIf="quote()">
+        <app-quote-card [text]="quote()!.text" [author]="quote()!.author"></app-quote-card>
+      </section>
+
+      <section class="card history">
+        <h3>Last 30 Days</h3>
+        <app-timeline-chart [data]="history()"></app-timeline-chart>
+      </section>
+    </div>
