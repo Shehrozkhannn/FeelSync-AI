@@ -17,8 +17,15 @@ export class ApiService {
 
   constructor() { }
 
-    createMood(payload: MoodPayload) {
-    return this.http.post<{ saved: any; quote: { text: string; author: string } }>(`${this.base}/moods`, payload);
+  createMood(payload: MoodPayload) {
+    return this.http.post<{
+      saved: any;
+      quote: {
+        ayah: string;
+        translation: string;
+        reference: string;
+      }
+    }>(`${this.base}/moods`, payload);
   }
 
   getRecent(limit = 30) {

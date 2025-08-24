@@ -9,16 +9,16 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-journal',
-   imports: [MoodPickerComponent, AnimatedTextareaComponent, FormsModule, TimelineChartComponent, QuoteCardComponent, CommonModule],
+  imports: [MoodPickerComponent, AnimatedTextareaComponent, FormsModule, TimelineChartComponent, QuoteCardComponent, CommonModule],
   templateUrl: './journal.component.html',
   styleUrl: './journal.component.css'
 })
 export class JournalComponent {
-    private api = inject(ApiService);
+  private api = inject(ApiService);
 
   emoji = signal<string>('');
   note = signal<string>('');
-  quote = signal<{text: string; author: string} | null>(null);
+  quote = signal<any | null>(null);
   history = signal<{ date: string; emoji: string; tag: string }[]>([]);
 
   tags = ['happy', 'calm', 'grateful', 'focused', 'tired', 'sad', 'stressed'];
@@ -33,10 +33,13 @@ export class JournalComponent {
   onPick(e: string) { this.emoji.set(e); }
 
   async save() {
-    const today = new Date().toISOString().slice(0,10);
+    const today = new Date().toISOString().slice(0, 10);
     this.api.createMood({ emoji: this.emoji(), tag: this.tagModel, note: this.note(), date: today })
       .subscribe(res => {
-        this.quote.set(res.quote);
+        this.quote.set({
+          text: res.quote.ayah,         // use ayah as text
+          author: res.quote.translation // or whatever field you want as "author"
+        });
         this.loadHistory();
         this.note.set('');
       });
