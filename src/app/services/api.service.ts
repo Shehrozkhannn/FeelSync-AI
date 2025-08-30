@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 
 export interface MoodPayload {
-  emoji: string;
   tag: string;
   note: string;
   date: string; // YYYY-MM-DD
@@ -25,6 +24,7 @@ export class ApiService {
         translation: string;
         reference: string;
       }
+      suggestedTag: string;
     }>(`${this.base}/moods`, payload);
   }
 
@@ -33,6 +33,8 @@ export class ApiService {
   }
 
   getHistory(days = 30) {
-    return this.http.get<{ date: string; emoji: string; tag: string }[]>(`${this.base}/moods/history?days=${days}`);
-  }
+  return this.http.get<{ date: string; mood: string; value: number }[]>(
+    `${this.base}/moods/history?days=${days}`
+  );
+}
 }
