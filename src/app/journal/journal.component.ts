@@ -2,13 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { AnimatedTextareaComponent } from '../animated-textarea/animated-textarea.component';
 import { ApiService } from '../services/api.service';
 import { FormsModule } from '@angular/forms';
-import { TimelineChartComponent } from '../timeline-chart/timeline-chart.component';
 import { QuoteCardComponent } from '../quote-card/quote-card.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-journal',
-  imports: [AnimatedTextareaComponent, FormsModule, TimelineChartComponent, QuoteCardComponent, CommonModule],
+  imports: [AnimatedTextareaComponent, FormsModule, QuoteCardComponent, CommonModule],
   templateUrl: './journal.component.html',
   styleUrl: './journal.component.css'
 })
