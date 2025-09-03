@@ -1,0 +1,31 @@
+.share-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e3f2fd, #bbfbc6);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ayah {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #2e3b55;
+}
+
+.translation {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+mat-card-actions{
+    padding: 18px 0px;
+}
+
+mat-card-actions button{
+    background: #004b40;
+    color: white;
+    margin-right: 7px;
+}

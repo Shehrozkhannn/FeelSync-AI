@@ -1,0 +1,11 @@
+<mat-card class="share-card">
+  <img mat-card-image src="quran-icon.png" width="250" height="250">
+    <mat-card-content>
+    <p class="ayah">“{{ data?.text }}”</p>
+    <p class="translation">{{ data?.translation }}</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="closeDialog()">Download</button>
+    <button mat-stroked-button color="accent">Share</button>
+  </mat-card-actions>
+</mat-card>

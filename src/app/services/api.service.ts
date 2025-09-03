@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 
 export interface MoodPayload {
-  tag: string;
   note: string;
   date: string; // YYYY-MM-DD
 }

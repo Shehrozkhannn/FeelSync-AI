@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JournalComponent } from './journal.component';
+import { ShareCardPopupComponent } from './share-card-popup.component';
 
-describe('JournalComponent', () => {
-  let component: JournalComponent;
-  let fixture: ComponentFixture<JournalComponent>;
+describe('ShareCardPopupComponent', () => {
+  let component: ShareCardPopupComponent;
+  let fixture: ComponentFixture<ShareCardPopupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JournalComponent]
+      imports: [ShareCardPopupComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(JournalComponent);
+    fixture = TestBed.createComponent(ShareCardPopupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -6,19 +6,35 @@
     </app-animated-textarea>
 
     <div class="row">
-      <select [(ngModel)]="tagModel" class="tag">
-        <option *ngFor="let t of tags" [value]="t">{{t}}</option>
-      </select>
       <button class="save" (click)="save()" [disabled]="!canSave()">Save & Get Tip</button>
     </div>
   </section>
 
-  <section class="card quote" *ngIf="quote()">
+  <section class="card quote" *ngIf="true">
     <app-quote-card [text]="quote()!.text" [author]="quote()!.author"></app-quote-card>
     <div class="suggested-tag" *ngIf="suggestedTag()">
-    <span class="label">✨ Suggested Tag:</span>
-    <span class="tag-pill">{{ suggestedTag() }}</span>
-  </div>
+      <span class="label">✨ Suggested Tag:</span>
+      <span class="tag-pill">{{ suggestedTag() }}</span>
+    </div>
+    <!-- <button class="share-btn" (click)="openShare()">Share Card</button> -->
+    <button mat-button (click)="openDialog()">Share Card</button>
   </section>
-  
+
+    <!-- <div class="modal" *ngIf="showSharePopup()">
+    <div class="modal-content">
+      <span class="close" (click)="closeShare()">&times;</span>
+
+      <div class="share-card" [ngStyle]="{ 'background': moodColor(ayahCard()?.mood) }" #shareCard>
+        <p class="ayah">{{ ayahCard()?.text }}</p>
+        <p class="translation">{{ ayahCard()?.translation }}</p>
+        <small class="branding">From MyQuranApp</small>
+      </div>
+
+      <div class="share-actions">
+        <button (click)="downloadCard()">Download</button>
+        <button (click)="shareCardNow()">Share</button>
+      </div>
+    </div>
+  </div> -->
+
 </div>
