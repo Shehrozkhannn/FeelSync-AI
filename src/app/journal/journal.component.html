@@ -5,12 +5,14 @@
     <app-animated-textarea placeholder="Today I feel…" (valueChange)="note.set($event)">
     </app-animated-textarea>
 
-    <div class="row">
-      <button class="save" (click)="save()" [disabled]="!canSave()">Save & Get Tip</button>
+    <div class="row" style="justify-content: flex-end;">
+      <button (click)="save()" [disabled]="!canSave()" style="border: none; cursor: pointer;">
+        <img src="arrow.png" alt="" height="40" width="41" class="send-btn">
+      </button>
     </div>
   </section>
 
-  <section class="card quote" *ngIf="true">
+  <section class="card quote" *ngIf="quote()">
     <app-quote-card [text]="quote()!.text" [author]="quote()!.author"></app-quote-card>
     <div class="suggested-tag" *ngIf="suggestedTag()">
       <span class="label">✨ Suggested Tag:</span>
