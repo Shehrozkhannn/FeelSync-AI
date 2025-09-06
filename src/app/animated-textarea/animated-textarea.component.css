@@ -35,3 +35,7 @@ textarea:focus {
         transform: rotate(1turn);
     }
 }
+
+textarea {
+  resize: none;
+}

@@ -6,11 +6,15 @@
  }
 
  .card {
-     background: rgb(255 255 255 / 75%);
+     background: rgb(255 255 255 / 95%);
      border-radius: 16px;
      backdrop-filter: blur(8px);
      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
      padding: 16px 18px;
+ }
+
+ .entry {
+     height: 230px;
  }
 
  .entry h2 {
@@ -59,30 +63,37 @@
      margin: 0 0 8px;
  }
 
+ .footer span {
+         display: flow;
+         text-align: center;
+         margin-bottom: 20px;
+         color: #b4b4b4  !important;
+ }
+
  .suggested-tag {
-  margin-top: 12px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+     margin-top: 12px;
+     font-size: 14px;
+     display: flex;
+     align-items: center;
+     gap: 6px;
 
-  .label {
-    font-weight: 500;
-    color: #555;
-  }
+     .label {
+         font-weight: 500;
+         color: #555;
+     }
 
-  .tag-pill {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: capitalize;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-}
+     .tag-pill {
+         background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+         color: #fff;
+         padding: 4px 10px;
+         border-radius: 20px;
+         font-size: 13px;
+         font-weight: 600;
+         text-transform: capitalize;
+         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     }
+ }
 
-.send-btn{
-    filter: invert(16%) /* pull toward dark */ sepia(41%) saturate(900%) hue-rotate(135deg) brightness(70%) contrast(120%);
-}
+ .send-btn {
+     filter: invert(16%) sepia(41%) saturate(900%) hue-rotate(72deg) brightness(70%) contrast(120%);
+ }

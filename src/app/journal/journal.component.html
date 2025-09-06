@@ -6,7 +6,7 @@
     </app-animated-textarea>
 
     <div class="row" style="justify-content: flex-end;">
-      <button (click)="save()" [disabled]="!canSave()" style="border: none; cursor: pointer;">
+      <button (click)="save()" [disabled]="!canSave()" style="border: none; cursor: pointer; background-color: transparent;">
         <img src="arrow.png" alt="" height="40" width="41" class="send-btn">
       </button>
     </div>
@@ -20,6 +20,9 @@
     </div>
     <!-- <button class="share-btn" (click)="openShare()">Share Card</button> -->
     <button mat-button (click)="openDialog()">Share Card</button>
+  </section>
+  <section class="footer">
+    <span>Synchronize your feelings with AI-powered insights</span>
   </section>
 
     <!-- <div class="modal" *ngIf="showSharePopup()">
