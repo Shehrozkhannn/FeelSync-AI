@@ -4,5 +4,6 @@
     <img src="quran-icon.png" alt="" height="100" width="100">
     <h1 class="montserrat-heading">Tafakkur AI</h1>
   </div>
-  <app-journal />
+  <app-journal [(showLoader)]="showLoader" />
+  <div class="loader" *ngIf="showLoader"></div>
 </div>

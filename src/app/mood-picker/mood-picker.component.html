@@ -1,7 +1,0 @@
-<div class="grid">
-      <button *ngFor="let e of emojis"
-        class="emoji" [ngClass]="{active: e === selected}"
-        (click)="pick.emit(e)">
-        {{ e }}
-      </button>
-    </div>

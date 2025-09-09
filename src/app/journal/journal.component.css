@@ -71,7 +71,6 @@
  }
 
  .suggested-tag {
-     margin-top: 12px;
      font-size: 14px;
      display: flex;
      align-items: center;
@@ -96,4 +95,11 @@
 
  .send-btn {
      filter: invert(16%) sepia(41%) saturate(900%) hue-rotate(72deg) brightness(70%) contrast(120%);
+ }
+
+ .card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
  }
